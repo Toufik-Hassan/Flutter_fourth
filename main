@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+import 'home.dart';
+//import 'home2.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Image',
+      home: Home(),
+    );
+  }
+}
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Column(
+        children: [
+
+      SizedBox(
+        width:double.infinity ,
+    child:   Image.asset("assets/trading.png",fit: BoxFit.cover,),
+    ),
+          SizedBox(height: 30,
+          ),
+     SizedBox(   width: double.infinity,
+     child: Column(
+       children: [
+
+
+
+     ElevatedButton(onPressed: (){
+       Navigator.push(context, MaterialPageRoute(builder:(context)=>HomePage()));
+     },
+       style: ElevatedButton.styleFrom(
+       backgroundColor: Colors.green,
+     ), child: Text("Open",style: TextStyle
+       (fontSize: 30,color: Colors.black,),),),
+
+       ElevatedButton(onPressed: (){},child: Text("List"),),
+       ],
+     ),
+    ),
+
+        ],
+
+      ),
+
+    );
+  }
+}
