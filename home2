@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'home2.dart';
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Home Page')),
+      body:Column(
+        children: [
+
+
+      Center(child: Text('Welcome to Home Page',style: TextStyle(fontSize: 30),)),
+
+     ElevatedButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder:(context)=>Home()));
+      },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.green,
+        ), child: Text("Open",style: TextStyle
+          (fontSize: 30,color: Colors.black,),),),
+
+
+        ],
+      ),
+
+    );
+
+  }
+}
